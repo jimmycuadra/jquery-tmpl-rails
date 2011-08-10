@@ -6,7 +6,7 @@ h2. Installation
 
 Add it to your gemfile:
 
-<pre><code>gem "jquery-tmpl-rails"
+<pre lang="ruby"><code>gem "jquery-tmpl-rails"
 </code></pre>
 
 Update your bundle:
@@ -18,7 +18,7 @@ h2. Usage
 
 Add jQuery Templates to any JavaScript file by requiring it:
 
-<pre><code>//= require jquery.tmpl
+<pre lang="javascript"><code>//= require jquery.tmpl
 </code></pre>
 
 Happy templating!
