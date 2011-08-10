@@ -1,1 +1,1 @@
-require "jquery-tmpl-rails/version"
+require "jquery-tmpl-rails/engine"
