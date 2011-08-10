@@ -1,0 +1,24 @@
+h1. jquery-tmpl-rails
+
+This gem added the jQuery Templates plugin to the asset pipeline in Rails => 3.1 applications.
+
+h2. Installation
+
+Add it to your gemfile:
+
+<pre><code>gem "jquery-tmpl-rails"
+</code></pre>
+
+Update your bundle:
+
+<pre><code>bundle install
+</code></pre>
+
+h2. Usage
+
+Add jQuery Templates to any JavaScript file by requiring it:
+
+<pre><code>//= require jquery.tmpl
+</code></pre>
+
+Happy templating!
