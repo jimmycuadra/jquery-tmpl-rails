@@ -8,8 +8,8 @@ Gem::Specification.new do |s|
   s.authors     = ["Jimmy Cuadra"]
   s.email       = ["jimmy@jimmycuadra.com"]
   s.homepage    = ""
-  s.summary     = %q{jQuery Templates plugin for Rails >= 3.1}
-  s.description = %q{Adds the jQuery Templates plugin to the asset pipeline in Rails >= 3.1 applications.}
+  s.summary     = %q{jQuery Templates for the Rails asset pipeline.}
+  s.description = %q{Adds the jQuery Templates plugin and a corresponding Sprockets engine to the asset pipeline in Rails applications.}
 
   s.files         = `git ls-files`.split("\n")
   s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
