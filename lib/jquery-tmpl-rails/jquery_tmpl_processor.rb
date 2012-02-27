@@ -1,3 +1,4 @@
+require 'sprockets'
 require 'sprockets/engines'
 require 'tilt'
 require 'action_view'
