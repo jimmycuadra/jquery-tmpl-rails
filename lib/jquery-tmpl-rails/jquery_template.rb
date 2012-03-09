@@ -1,11 +1,9 @@
 require 'sprockets'
-require 'sprockets/engines'
-require 'tilt'
 require 'action_view'
 require 'action_view/helpers'
 
-module Sprockets
-  class JqueryTmplProcessor < Tilt::Template
+module JqueryTmplRails
+  class JqueryTemplate < Tilt::Template
     include ActionView::Helpers::JavaScriptHelper
 
     @template_prefix = ""
@@ -31,9 +29,7 @@ module Sprockets
     end
 
     def evaluate(scope, locals, &block)
-      <<-TMPL
-jQuery.template("#{template_name(scope)}", "#{escape_javascript data}");
-        TMPL
+      %{jQuery.template("#{template_name(scope)}", "#{escape_javascript data}");}
     end
 
     private
@@ -42,6 +38,4 @@ jQuery.template("#{template_name(scope)}", "#{escape_javascript data}");
       scope.logical_path.sub(self.class.template_prefix, "")
     end
   end
-
-  register_engine '.tmpl', JqueryTmplProcessor
 end

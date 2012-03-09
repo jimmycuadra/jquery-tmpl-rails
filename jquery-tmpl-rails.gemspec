@@ -1,10 +1,8 @@
 # -*- encoding: utf-8 -*-
-$:.push File.expand_path("../lib", __FILE__)
-require "jquery-tmpl-rails/version"
 
 Gem::Specification.new do |s|
   s.name        = "jquery-tmpl-rails"
-  s.version     = Jquery::Tmpl::Rails::VERSION
+  s.version     = "0.1.2"
   s.authors     = ["Jimmy Cuadra"]
   s.email       = ["jimmy@jimmycuadra.com"]
   s.homepage    = ""
