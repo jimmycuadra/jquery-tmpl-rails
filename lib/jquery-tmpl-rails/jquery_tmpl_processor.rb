@@ -17,9 +17,7 @@ module Sprockets
 
     def evaluate(scope, locals, &block)
       <<-TMPL
-;(function($) {
-  return $.template(#{scope.logical_path.inspect}, "#{escape_javascript data}");
-})(jQuery);
+jQuery.template(#{scope.logical_path.inspect}, "#{escape_javascript data}");
         TMPL
     end
   end
