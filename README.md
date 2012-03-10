@@ -10,14 +10,14 @@ Add it to your Gemfile and run `bundle`.
 
 ## Usage
 
-jQuery templates will be recognized by Sprockets with the `.tmpl` extension. Place them anywhere in the Sprockets load path..
+jQuery templates will be recognized by Sprockets with the `.tmpl` extension. Place them anywhere in the Sprockets load path.
 
 ```html
 <!-- app/assets/javascripts/templates/author.tmpl -->
 <div class="author">${name}</div>
 ```
 
-In your application's JavaScript manifest file, require the jQuery Templates plugin followed by your individual templates. The templates are compiled and named with their Sprockets logical path:
+In your application's JavaScript manifest file, require the jQuery Templates plugin followed by your templates. The templates are compiled and named with their Sprockets logical path:
 
 ```javascript
 //= require jquery-tmpl
@@ -34,7 +34,7 @@ If the path to all of your templates have a common prefix that you prefer is not
 config.jquery_templates.prefix = "templates"
 ```
 
-In the previous usage example, this would allow you to do this instead:
+That would change the previous example to this:
 
 ```javascript
 $.tmpl("author", { name: "Jimmy" }).appendTo("#author");
