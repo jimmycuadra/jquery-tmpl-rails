@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |s|
   s.name        = "jquery-tmpl-rails"
-  s.version     = "0.1.2"
+  s.version     = "1.0.0"
   s.authors     = ["Jimmy Cuadra"]
   s.email       = ["jimmy@jimmycuadra.com"]
   s.homepage    = ""
