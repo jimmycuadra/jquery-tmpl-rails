@@ -1,6 +1,7 @@
 require 'sprockets'
 require 'action_view'
 require 'action_view/helpers'
+require 'tilt'
 
 module JqueryTmplRails
   class JqueryTemplate < Tilt::Template
