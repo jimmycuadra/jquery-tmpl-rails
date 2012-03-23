@@ -21,8 +21,6 @@ module JqueryTmplRails
     private
     
     def template_name(scope)
-      ActiveRecord::Base.logger.debug "Prefix is _#{JqueryTmplRails.prefix}_"
-      puts "Prefix is _#{JqueryTmplRails.prefix}_"
       scope.logical_path.sub(JqueryTmplRails.prefix, "")
     end
   end

@@ -11,8 +11,6 @@ module JqueryTmplRails
       end
       
       @prefix = pref
-      
-      puts "prefix is now #{@prefix.inspect}"
     end
     
     def prefix
