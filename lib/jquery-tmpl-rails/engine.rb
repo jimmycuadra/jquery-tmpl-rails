@@ -1,7 +1,7 @@
 require "active_support/ordered_options"
 
 module JqueryTmplRails
-  class Railtie < Rails::Railtie
+  class Railtie < Rails::Engine
     initializer "sprockets.jquery_templates", :after => "sprockets.environment", :group => :all do |app|
       next unless app.assets
 

@@ -1,2 +1,2 @@
 require "jquery-tmpl-rails/jquery_template"
-require "jquery-tmpl-rails/railtie"
+require "jquery-tmpl-rails/engine"
