@@ -6,32 +6,24 @@ require 'tilt'
 module JqueryTmplRails
   class JqueryTemplate < Tilt::Template
     include ActionView::Helpers::JavaScriptHelper
-
+    
     def self.default_mime_type
       'application/javascript'
     end
-
-    def prepare
-      @prefix = normalize_prefix(Rails.configuration.jquery_templates.prefix)
-    end
-
+    
     def evaluate(scope, locals, &block)
       %{jQuery.template("#{template_name(scope)}", "#{escape_javascript(data)}");}
     end
-
-    private
-
-    def normalize_prefix(prefix)
-      if prefix.length > 0
-        prefix = prefix[1, prefix.length - 1] if prefix.start_with?("/")
-        prefix += "/" unless prefix.end_with?("/")
-      end
-
-      prefix
+    
+    def prepare
     end
-
+    
+    private
+    
     def template_name(scope)
-      scope.logical_path.sub(@prefix, "")
+      ActiveRecord::Base.logger.debug "Prefix is _#{JqueryTmplRails.prefix}_"
+      puts "Prefix is _#{JqueryTmplRails.prefix}_"
+      scope.logical_path.sub(JqueryTmplRails.prefix, "")
     end
   end
 end
