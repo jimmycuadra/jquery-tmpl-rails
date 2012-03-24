@@ -1,4 +1,5 @@
 require 'sprockets'
+require 'tilt'
 require 'action_view'
 require 'action_view/helpers'
 
