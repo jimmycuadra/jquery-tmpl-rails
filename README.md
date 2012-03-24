@@ -28,16 +28,26 @@ $.tmpl("templates/author", { name: "Jimmy" }).appendTo("#author");
 
 ## Configuration
 
-If the path to all of your templates have a common prefix that you prefer is not included in the template's name, you can set this option in `config/application.rb`:
+If the path to all of your templates have a common prefix that you prefer is not included in the template's name, you can set this option in an initializer such as `config/initializers/jquery_templates.rb`:
 
 ```ruby
-config.jquery_templates.prefix = "templates"
+JqueryTmplRails.configure do |config|
+  config.prefix = "templates"
+end
 ```
 
 That would change the previous example to this:
 
 ```javascript
 $.tmpl("author", { name: "Jimmy" }).appendTo("#author");
+```
+
+Note: If you want to use only the name of your file for the template name, you can do so:
+
+```ruby
+JqueryTmplRails.configure do |config|
+  config.prefix = /([^\/]*\/)*/
+end
 ```
 
 Happy templating!
