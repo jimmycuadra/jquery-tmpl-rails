@@ -15,4 +15,10 @@ feature "Using jquery-tmpl-rails", js: true do
     visit "/prefix"
     page.should have_content("Jimmy")
   end
+
+  scenario "Using a regular expression as a template prefix", js: true do
+    Rails.application.config.jquery_templates.prefix = %r{([^/]*/)*}
+    visit "/prefix"
+    page.should have_content("Jimmy")
+  end
 end

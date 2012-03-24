@@ -40,6 +40,12 @@ That would change the previous example to this:
 $.tmpl("author", { name: "Jimmy" }).appendTo("#author");
 ```
 
+The prefix can also be a regular expression. For example, to use only the name of the file for the template name, regardless of directory structure:
+
+```ruby
+config.jquery_templates.prefix = %r{([^/]*/)*}
+```
+
 Happy templating!
 
 ## Acknowledgements

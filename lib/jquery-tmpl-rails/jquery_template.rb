@@ -22,7 +22,7 @@ module JqueryTmplRails
     private
 
     def normalize_prefix(prefix)
-      if prefix.length > 0
+      if prefix.respond_to?(:length) && prefix.length > 0
         prefix = prefix[1, prefix.length - 1] if prefix.start_with?("/")
         prefix += "/" unless prefix.end_with?("/")
       end
