@@ -1,4 +1,4 @@
-[![endorse](http://api.coderwall.com/jimmycuadra/endorsecount.png)](http://coderwall.com/jimmycuadra)
+[![Code Climate](https://codeclimate.com/github/jimmycuadra/jquery-tmpl-rails.png)](https://codeclimate.com/github/jimmycuadra/jquery-tmpl-rails) [![endorse](http://api.coderwall.com/jimmycuadra/endorsecount.png)](http://coderwall.com/jimmycuadra)
 
 # jquery-tmpl-rails
 
